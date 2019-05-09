@@ -10,8 +10,8 @@ h1 {
     text-size-adjust: 200%;
 }
 
-img{
-    width: 20%;
+img {
+    width: 24%;
 }
 
 p {
@@ -32,6 +32,7 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
+    width: 20%;
 }
 
 #winsLoses {
@@ -39,10 +40,11 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
+    width: 20%;
 }
 
 #gemImages {
-    align-content: center;
+    align-items: center;
     display: block;
 }
 
@@ -51,4 +53,5 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
+    width: 20%;
 }
