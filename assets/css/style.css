@@ -6,12 +6,13 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     text-size-adjust: 200%;
+    margin-left: 2%;
 }
 
 img {
-    width: 24%;
+    width: 5%;
 }
 
 p {
@@ -25,6 +26,7 @@ p {
     background-color: aqua;
     text-align: left;
     margin-bottom: 20px;
+    width: 20%;
 }
 
 #tallyBox {
