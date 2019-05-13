@@ -10,8 +10,28 @@
 
 $(document).ready(function() {
 
-var goalScore = Math.floor(Math.random() * 102) + 19; 
+
+//Generate the goalScore for the player to try to match
+var goalScore = Math.floor(Math.random() * 102) + 40; 
 console.log("goalScore: " + goalScore); 
 $("#goalScore").html(goalScore); 
+
+//Generate the random values for each crystal
+
+var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
+console.log("purpleCrystal: " + purpleCrystal); 
+$("#purple").val(purpleCrystal);
+
+var WhitteCrystal = Math.floor(Math.random() * 10) + 1; 
+console.log("whiteCrystal: " + whiteCrystal); 
+$("#white").val(whiteCrystal);
+
+var greenCrystal = Math.floor(Math.random() * 10) + 1; 
+console.log("greenCrystal: " + greenCrystal); 
+$("#green").val(greenCrystal);
+
+var blueCrystal = Math.floor(Math.random() * 10) + 1; 
+console.log("blueCrystal: " + blueCrystal); 
+$("#blue").val(blueCrystal);
 
 });
