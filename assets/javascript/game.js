@@ -17,6 +17,10 @@ console.log("goalScore: " + goalScore);
 $("#goalScore").html(goalScore); 
 
 //Generate the random values for each crystal
+var purpleCrystal;
+var whiteCrystal;
+var greenCrystal;
+var blueCrystal;
 
 var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
 console.log("purpleCrystal: " + purpleCrystal); 
@@ -33,6 +37,7 @@ $("#green").val(greenCrystal);
 var blueCrystal = Math.floor(Math.random() * 10) + 1; 
 console.log("blueCrystal: " + blueCrystal); 
 $("#blue").val(blueCrystal);
+
 
 //When you click each crystal, add value to currentScore
 
@@ -85,31 +90,28 @@ function gameReset() {
     // clear crystal number values
     // pick new goalScore and show new on page
     // pick new crystal number values
+    totalScore = 0;
     var goalScore = Math.floor(Math.random() * 50) + 50; 
     console.log("goalScore: " + goalScore); 
     $("#goalScore").html(goalScore); 
-    totalScore = 0;
     $("#currentScore").html(0);
+    $("#purple").removeData(purpleCrystal);
 
-    $("#purple").on('click', function () {
-        totalScore += purpleCrystal;
-        $("#currentScore").html(totalScore);
-    });
-    
-    $("#white").on('click', function () {
-        totalScore += whiteCrystal;
-        $("#currentScore").html(totalScore);
-    });
-    
-    $("#green").on('click', function () {
-        totalScore += greenCrystal;
-        $("#currentScore").html(totalScore);
-    });
-    
-    $("#blue").on('click', function () {
-        totalScore += blueCrystal;
-        $("#currentScore").html(totalScore);
-    });
+    var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
+    console.log("purpleCrystal: " + purpleCrystal); 
+    $("#purple").val(purpleCrystal);
+
+    var whiteCrystal = Math.floor(Math.random() * 10) + 1; 
+    console.log("whiteCrystal: " + whiteCrystal); 
+    $("#white").val(whiteCrystal);
+
+    var greenCrystal = Math.floor(Math.random() * 10) + 1; 
+    console.log("greenCrystal: " + greenCrystal); 
+    $("#green").val(greenCrystal);
+
+    var blueCrystal = Math.floor(Math.random() * 10) + 1; 
+    console.log("blueCrystal: " + blueCrystal); 
+    $("#blue").val(blueCrystal);
 };
 
 });
