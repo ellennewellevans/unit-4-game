@@ -60,5 +60,31 @@ $("#blue").on('click', function () {
     $("#currentScore").html(totalScore);
 });
 
+//How to win the game
+$("#gemImages").on("click", function() {
+    if (totalScore === goalScore) {
+
+    wins++;
+    $("#wins").html(wins);
+    alert("You Win!");
+    }
+
+    else if (totalScore > goalScore){
+
+    losses++;
+    $("#loses").html(losses);
+    alert("You Lose!");
+    }
+});
+
+function gameReset(x) {
+
+    // clear crystal number values
+    // pick new goalScore and show new on page
+    // pick new crystal number values
+
+    totalScore = 0;
+    $("#goalScore").html(goalScore);
+};
 
 });

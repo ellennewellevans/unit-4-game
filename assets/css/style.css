@@ -64,3 +64,9 @@ p {
     text-align: center;
     padding-left: 20px;
 }
+
+#currentScore {
+    font-size: 300%;
+    text-align: center;
+    padding-left: 20px;
+}
