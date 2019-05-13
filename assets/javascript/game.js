@@ -22,7 +22,7 @@ var purpleCrystal = Math.floor(Math.random() * 10) + 1;
 console.log("purpleCrystal: " + purpleCrystal); 
 $("#purple").val(purpleCrystal);
 
-var WhitteCrystal = Math.floor(Math.random() * 10) + 1; 
+var whiteCrystal = Math.floor(Math.random() * 10) + 1; 
 console.log("whiteCrystal: " + whiteCrystal); 
 $("#white").val(whiteCrystal);
 

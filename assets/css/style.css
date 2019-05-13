@@ -58,3 +58,9 @@ p {
     margin-bottom: 20px;
     width: 20%;
 }
+
+#goalScore {
+    font-size: 300%;
+    text-align: center;
+    padding-left: 20px;
+}
