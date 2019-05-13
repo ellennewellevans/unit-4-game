@@ -6,18 +6,18 @@ body {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     text-size-adjust: 200%;
-    margin-left: 2%;
 }
 
 img {
-    width: 5%;
+    width: 23%;
 }
 
 p {
     padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
 }
 
 .instructions {
@@ -27,7 +27,7 @@ p {
     background-color: aqua;
     text-align: left;
     margin-bottom: 20px;
-    width: 20%;
+    width: auto;
 }
 
 #tallyBox {
@@ -35,7 +35,11 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
-    width: 20%;
+    width: auto;
+}
+
+.win-lose {
+    text-align: left;
 }
 
 #winsLoses {
@@ -43,12 +47,12 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
-    width: 20%;
+    width: 30%;
 }
 
 #gemImages {
     align-items: center;
-    display: block;
+    display: inline-block;
 }
 
 #goalScoreBox {
@@ -56,17 +60,15 @@ p {
     border-width: 2px;
     border-color: black;
     margin-bottom: 20px;
-    width: 20%;
+    width: 30%;
 }
 
 #goalScore {
     font-size: 300%;
     text-align: center;
-    padding-left: 20px;
 }
 
 #currentScore {
     font-size: 300%;
     text-align: center;
-    padding-left: 20px;
 }
