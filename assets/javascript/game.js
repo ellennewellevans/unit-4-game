@@ -34,4 +34,22 @@ var blueCrystal = Math.floor(Math.random() * 10) + 1;
 console.log("blueCrystal: " + blueCrystal); 
 $("#blue").val(blueCrystal);
 
+//When you click each crystal, add value to current score
+
+$("#purple").on('click', function () {
+    $("#currentScore").html(purpleCrystal);
+});
+
+$("#white").on('click', function () {
+    $("#currentScore").html(whiteCrystal);
+});
+
+$("#green").on('click', function () {
+    $("#currentScore").html(greenCrystal);
+});
+
+$("#blue").on('click', function () {
+    $("#currentScore").html(blueCrystal);
+});
+
 });
