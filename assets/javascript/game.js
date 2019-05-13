@@ -61,12 +61,14 @@ $("#blue").on('click', function () {
 });
 
 //How to win the game
+
 $("#gemImages").on("click", function() {
     if (totalScore === goalScore) {
 
     wins++;
     $("#wins").html(wins);
     alert("You Win!");
+    gameReset();
     }
 
     else if (totalScore > goalScore){
@@ -74,17 +76,40 @@ $("#gemImages").on("click", function() {
     losses++;
     $("#loses").html(losses);
     alert("You Lose!");
+    gameReset();
     }
 });
 
-function gameReset(x) {
+function gameReset() {
 
     // clear crystal number values
     // pick new goalScore and show new on page
     // pick new crystal number values
-
+    var goalScore = Math.floor(Math.random() * 50) + 50; 
+    console.log("goalScore: " + goalScore); 
+    $("#goalScore").html(goalScore); 
     totalScore = 0;
-    $("#goalScore").html(goalScore);
+    $("#currentScore").html(0);
+
+    $("#purple").on('click', function () {
+        totalScore += purpleCrystal;
+        $("#currentScore").html(totalScore);
+    });
+    
+    $("#white").on('click', function () {
+        totalScore += whiteCrystal;
+        $("#currentScore").html(totalScore);
+    });
+    
+    $("#green").on('click', function () {
+        totalScore += greenCrystal;
+        $("#currentScore").html(totalScore);
+    });
+    
+    $("#blue").on('click', function () {
+        totalScore += blueCrystal;
+        $("#currentScore").html(totalScore);
+    });
 };
 
 });
