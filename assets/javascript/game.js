@@ -87,26 +87,23 @@ function gameReset() {
     // pick new goalScore and show new on page
     // pick new crystal number values
     totalScore = 0;
-    var goalScore = Math.floor(Math.random() * 50) + 50; 
+    goalScore = Math.floor(Math.random() * 50) + 50; 
     console.log("goalScore: " + goalScore); 
     $("#goalScore").html(goalScore); 
     $("#currentScore").html(0);
 
-    var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
+    purpleCrystal = Math.floor(Math.random() * 10) + 1; 
     console.log("purpleCrystal: " + purpleCrystal); 
-    $("#purple").val(purpleCrystal);
 
-    var whiteCrystal = Math.floor(Math.random() * 10) + 1; 
+    whiteCrystal = Math.floor(Math.random() * 10) + 1; 
     console.log("whiteCrystal: " + whiteCrystal); 
-    $("#white").val(whiteCrystal);
-
-    var greenCrystal = Math.floor(Math.random() * 10) + 1; 
+    
+    greenCrystal = Math.floor(Math.random() * 10) + 1; 
     console.log("greenCrystal: " + greenCrystal); 
-    $("#green").val(greenCrystal);
-
-    var blueCrystal = Math.floor(Math.random() * 10) + 1; 
+   
+    blueCrystal = Math.floor(Math.random() * 10) + 1; 
     console.log("blueCrystal: " + blueCrystal); 
-    $("#blue").val(blueCrystal);
+    
 };
 
 });
