@@ -1,4 +1,4 @@
-//game with 4 crystals and they each have a unique randomly assigned value from 1 - 20
+//game with 4 crystals and they each have a unique randomly assigned value from 1 - 10
 //there is a randomly assigned target score of 50 - 100
 //new numbers will generate each game
 //each value adds to the previous selected value
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 //Generate the goalScore for the player to try to match
-var goalScore = Math.floor(Math.random() * 102) + 40; 
+var goalScore = Math.floor(Math.random() * 50) + 50; 
 console.log("goalScore: " + goalScore); 
 $("#goalScore").html(goalScore); 
 
@@ -34,22 +34,31 @@ var blueCrystal = Math.floor(Math.random() * 10) + 1;
 console.log("blueCrystal: " + blueCrystal); 
 $("#blue").val(blueCrystal);
 
-//When you click each crystal, add value to current score
+//When you click each crystal, add value to currentScore
+
+var totalScore = 0; 
+var wins = 0;
+var losses = 0;
 
 $("#purple").on('click', function () {
-    $("#currentScore").html(purpleCrystal);
+    totalScore += purpleCrystal;
+    $("#currentScore").html(totalScore);
 });
 
 $("#white").on('click', function () {
-    $("#currentScore").html(whiteCrystal);
+    totalScore += whiteCrystal;
+    $("#currentScore").html(totalScore);
 });
 
 $("#green").on('click', function () {
-    $("#currentScore").html(greenCrystal);
+    totalScore += greenCrystal;
+    $("#currentScore").html(totalScore);
 });
 
 $("#blue").on('click', function () {
-    $("#currentScore").html(blueCrystal);
+    totalScore += blueCrystal;
+    $("#currentScore").html(totalScore);
 });
+
 
 });
