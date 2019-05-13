@@ -17,10 +17,6 @@ console.log("goalScore: " + goalScore);
 $("#goalScore").html(goalScore); 
 
 //Generate the random values for each crystal
-var purpleCrystal;
-var whiteCrystal;
-var greenCrystal;
-var blueCrystal;
 
 var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
 console.log("purpleCrystal: " + purpleCrystal); 
@@ -95,7 +91,6 @@ function gameReset() {
     console.log("goalScore: " + goalScore); 
     $("#goalScore").html(goalScore); 
     $("#currentScore").html(0);
-    $("#purple").removeData(purpleCrystal);
 
     var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
     console.log("purpleCrystal: " + purpleCrystal); 
