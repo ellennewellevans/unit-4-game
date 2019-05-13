@@ -6,3 +6,12 @@
 //if the current score is equal to the target score, the player wins
 //if the total score exceeds the target score, the player loses
 //wins and loses should be tallied on screen, even when the game resets
+
+
+$(document).ready(function() {
+
+var goalScore = Math.floor(Math.random() * 102) + 19; 
+console.log("goalScore: " + goalScore); 
+$("#goalScore").html(goalScore); 
+
+});

@@ -17,6 +17,7 @@ img {
 
 p {
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .instructions {
@@ -50,7 +51,7 @@ p {
     display: block;
 }
 
-#totalScore {
+#goalScoreBox {
     border-style: solid;
     border-width: 2px;
     border-color: black;
