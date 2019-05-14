@@ -75,7 +75,7 @@ $("#gemImages").on("click", function() {
     else if (totalScore > goalScore){
 
     losses++;
-    $("#loses").html(losses);
+    $("#losses").html(losses);
     alert("You Lose!");
     gameReset();
     }
