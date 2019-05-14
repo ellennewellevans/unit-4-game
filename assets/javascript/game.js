@@ -7,103 +7,101 @@
 //if the total score exceeds the target score, the player loses
 //wins and loses should be tallied on screen, even when the game resets
 
+$(document).ready(function () {
 
-$(document).ready(function() {
+    var purpleCrystal;
+    var whiteCrystal;
+    var greenCrystal;
+    var blueCrystal;
 
+    //Generate the goalScore for the player to try to match
+    var goalScore = Math.floor(Math.random() * 50) + 50;
+    console.log("goalScore: " + goalScore);
+    $("#goalScore").html(goalScore);
 
-//Generate the goalScore for the player to try to match
-var goalScore = Math.floor(Math.random() * 50) + 50; 
-console.log("goalScore: " + goalScore); 
-$("#goalScore").html(goalScore); 
+    //Generate the random values for each crystal
 
-//Generate the random values for each crystal
+    function getCrystalValues() {
 
-var purpleCrystal = Math.floor(Math.random() * 10) + 1; 
-console.log("purpleCrystal: " + purpleCrystal); 
-$("#purple").val(purpleCrystal);
+        purpleCrystal = Math.floor(Math.random() * 10) + 1;
+        console.log("purpleCrystal: " + purpleCrystal);
+        $("#purple").val(purpleCrystal);
 
-var whiteCrystal = Math.floor(Math.random() * 10) + 1; 
-console.log("whiteCrystal: " + whiteCrystal); 
-$("#white").val(whiteCrystal);
+        whiteCrystal = Math.floor(Math.random() * 10) + 1;
+        console.log("whiteCrystal: " + whiteCrystal);
+        $("#white").val(whiteCrystal);
 
-var greenCrystal = Math.floor(Math.random() * 10) + 1; 
-console.log("greenCrystal: " + greenCrystal); 
-$("#green").val(greenCrystal);
+        greenCrystal = Math.floor(Math.random() * 10) + 1;
+        console.log("greenCrystal: " + greenCrystal);
+        $("#green").val(greenCrystal);
 
-var blueCrystal = Math.floor(Math.random() * 10) + 1; 
-console.log("blueCrystal: " + blueCrystal); 
-$("#blue").val(blueCrystal);
+        blueCrystal = Math.floor(Math.random() * 10) + 1;
+        console.log("blueCrystal: " + blueCrystal);
+        $("#blue").val(blueCrystal);
+    };
 
+    getCrystalValues();
 
-//When you click each crystal, add value to currentScore
+    //When you click each crystal, add value to currentScore
 
-var totalScore = 0; 
-var wins = 0;
-var losses = 0;
+    var totalScore = 0;
+    var wins = 0;
+    var losses = 0;
 
-$("#purple").on('click', function () {
-    totalScore += purpleCrystal;
-    $("#currentScore").html(totalScore);
-});
+    function clickValues() {
 
-$("#white").on('click', function () {
-    totalScore += whiteCrystal;
-    $("#currentScore").html(totalScore);
-});
+        $("#purple").on('click', function () {
+            totalScore += purpleCrystal;
+            $("#currentScore").html(totalScore);
+        });
 
-$("#green").on('click', function () {
-    totalScore += greenCrystal;
-    $("#currentScore").html(totalScore);
-});
+        $("#white").on('click', function () {
+            totalScore += whiteCrystal;
+            $("#currentScore").html(totalScore);
+        });
 
-$("#blue").on('click', function () {
-    totalScore += blueCrystal;
-    $("#currentScore").html(totalScore);
-});
+        $("#green").on('click', function () {
+            totalScore += greenCrystal;
+            $("#currentScore").html(totalScore);
+        });
 
-//How to win the game
+        $("#blue").on('click', function () {
+            totalScore += blueCrystal;
+            $("#currentScore").html(totalScore);
+        });
+    };
 
-$("#gemImages").on("click", function() {
-    if (totalScore === goalScore) {
+    clickValues();
 
-    wins++;
-    $("#wins").html(wins);
-    alert("You Win!");
-    gameReset();
-    }
+    //How to win the game
 
-    else if (totalScore > goalScore){
+    $("#gemImages").on("click", function () {
+        if (totalScore === goalScore) {
 
-    losses++;
-    $("#losses").html(losses);
-    alert("You Lose!");
-    gameReset();
-    }
-});
+            wins++;
+            $("#wins").html(wins);
+            alert("You Win!");
+            gameReset();
+        } else if (totalScore > goalScore) {
 
-function gameReset() {
+            losses++;
+            $("#losses").html(losses);
+            alert("You Lose!");
+            gameReset();
+        }
+    });
 
-    // clear crystal number values
-    // pick new goalScore and show new on page
-    // pick new crystal number values
-    totalScore = 0;
-    goalScore = Math.floor(Math.random() * 50) + 50; 
-    console.log("goalScore: " + goalScore); 
-    $("#goalScore").html(goalScore); 
-    $("#currentScore").html(0);
+    function gameReset() {
 
-    purpleCrystal = Math.floor(Math.random() * 10) + 1; 
-    console.log("purpleCrystal: " + purpleCrystal); 
-
-    whiteCrystal = Math.floor(Math.random() * 10) + 1; 
-    console.log("whiteCrystal: " + whiteCrystal); 
-    
-    greenCrystal = Math.floor(Math.random() * 10) + 1; 
-    console.log("greenCrystal: " + greenCrystal); 
-   
-    blueCrystal = Math.floor(Math.random() * 10) + 1; 
-    console.log("blueCrystal: " + blueCrystal); 
-    
-};
+        // clear crystal number values
+        // pick new goalScore and show new on page
+        // pick new crystal number values
+        totalScore = 0;
+        goalScore = Math.floor(Math.random() * 50) + 50;
+        console.log("goalScore: " + goalScore);
+        $("#goalScore").html(goalScore);
+        $("#currentScore").html(0);
+        getCrystalValues();
+    };
 
 });
